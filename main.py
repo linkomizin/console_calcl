@@ -65,10 +65,11 @@ def main():
 def logick_2():
 	while True:
 		a = argument_1()
-
+		oper = operator_2()
 		b = argument_1()
 
-		rezult = operator (a,b)
+
+		rezult = (a, oper[1], b)
 		print('Результат: ', rezult)
 
 
@@ -81,7 +82,8 @@ def operator_2():
 			number = int(number)
 			if	number in list(oper.keys()):
 				print(oper.get(number))
-
+				znak = oper.get(number)
+				return number, znak
 			elif number not in list(oper.keys()):
 				print('is not verifer number')
 			continue
@@ -93,6 +95,6 @@ def operator_2():
 
 
 
-operator_2()
-# logick_2()
+# operator_2()
+logick_2()
 # main()
