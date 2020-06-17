@@ -67,10 +67,7 @@ def logick_2():
 		a = argument_1()
 		oper = operator_2()
 		b = argument_1()
-
-
-		rezult = (a, oper[1], b)
-		print('Результат: ', rezult)
+		print('Результат: ', a, '{}', b).format(oper[1])
 
 
 def operator_2():
