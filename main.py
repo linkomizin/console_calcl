@@ -56,8 +56,10 @@ def main():
 	while True:
 		a = argument_1()
 
-		print('Введено: {}, {}'.format(a, b))
+		
 		b = argument_1()
+
+		print('Введено: {a}, {b}'.format(a, b))
 		print('Какой знак выберешь?: \n 1: + \n 2: - \n 3: * \n 4: / ')
 		operation = operator(a,b)
 		print('Результат: ', operation)
@@ -67,7 +69,9 @@ def logick_2():
 		a = argument_1()
 		oper = operator_2()
 		b = argument_1()
-		print('Результат: ', a, '{}', b).format(oper[1])
+		
+		
+		print('Результат: ', a, oper, b)#.format(oper)
 
 
 def operator_2():
@@ -80,10 +84,11 @@ def operator_2():
 			if	number in list(oper.keys()):
 				print(oper.get(number))
 				znak = oper.get(number)
-				return number, znak
+				return number and znak
+				continue
 			elif number not in list(oper.keys()):
 				print('is not verifer number')
-			continue
+				continue
 			break
 		except (ValueError , AttributeError):
 			print(' Введите число! ')
